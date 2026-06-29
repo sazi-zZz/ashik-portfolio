@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Limelight&display=swap');
+
+* {
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+
+/* title font  */
+.limelight-regular {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* normal font  */
+.chelsea-market-regular {
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Limelight", sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: clamp(0.688rem, 0.579rem + 0.55vw, 1.125rem);
+    /* 11 18  */
+    text-align: right;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: "Chelsea Market", system-ui;
+}
+
+header {
+    padding: 30px 0px 10px 0px;
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: clamp(3.125rem, 2.502rem + 3.12vw, 5.625rem);
+}
+
+.title {
+    font-size: clamp(1.563rem, 1.329rem + 1.17vw, 2.5rem);
+}
+
+.gallery {
+    padding: 17px 0px 0px 0px;
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    column-count: 3;
+    column-width: 300px;
+    column-gap: 10px;
+    transition: opacity 0.4s;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.4s, opacity 0.4s;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+/* @media (min-width: 1000px) {
+    .gallery:has(img:hover) img:not(:hover) {
+        opacity: 0.07;
+    }
+} */
+
+.img-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: aliceblue;
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.img-overlay button {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: black;
+    background-color: white;
+    font-size: 21px;
+    cursor: pointer;
+    z-index: 100;
+    border: none;
+}
+
+.img-overlay button:hover {
+    background-color: black;
+    color: white;
+}
+
+#overlay-image {
+    display: inline-block;
+    width: min(600px, 100%);
+}
